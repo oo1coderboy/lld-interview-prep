@@ -73,4 +73,16 @@ public class Car {
         System.out.println("Engine On: " + isEngineOn);
     }
 
+
+    public static void main(String[] args) {
+        Car myCar = new Car("Red", "Toyota", "2020", 0, 50.0, false);
+        myCar.displayStatus();
+        myCar.startEngine();
+        myCar.accelerate(30);
+        myCar.brake(10);
+        myCar.refuel(20);
+        myCar.stopEngine();
+        myCar.displayStatus();
+    }
+
 }

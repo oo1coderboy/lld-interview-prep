@@ -211,6 +211,6 @@ Practice frequently asked design problems:
 
 ---
 
-**Author:** Guddu Kumar Yadav 
+**Author:** `Guddu Kumar Yadav`
 **Category:** System Design / LLD Interview Preparation  
 **Last Updated:** October 2025  

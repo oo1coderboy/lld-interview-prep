@@ -131,6 +131,99 @@ return 10; // ❌ not allowed
 
 ---
 
-**Author:** `Guddu Kumar Yadav`
-**Category:** System Design / LLD Interview Preparation  
+# ⚡ Abstract Classes & Interfaces
+
+## 1. Difference between abstract class & interface
+| Feature	Abstract | Class |	Interface |
+-----------------|--------|------------
+| **Code Sharing** |	Can have fields & methods |	Only constants + abstract/default methods |
+| **Inheritance** | Single inheritance only |	Multiple interfaces allowed |
+| **Use Case**	| Share code across similar classes |	Define behavior contract |
+
+---
+
+### Example:
+```java
+abstract class Animal { 
+    abstract void sound(); 
+}
+
+interface Pet {
+     void play(); 
+}
+
+class Dog extends Animal implements Pet {
+
+  void sound() { 
+    System.out.println("Barks"); 
+  }
+
+  public void play() { 
+    System.out.println("Plays"); 
+ }
+}
+```
+
+## 2. Can abstract class implement an interface?
+
+- ✅ Yes, to provide partial implementation.
+```java
+abstract class Animal implements Pet {
+  void commonPlay() { System.out.println("Plays"); }
+}
+```
+
+## 3. Why can’t we instantiate abstract classes?
+
+- ❌ They are incomplete blueprints. Abstract methods have no body.
+
+## 4. Limitations of abstract classes vs interfaces
+
+- Abstract → single inheritance only, cannot implement multiple classes.
+
+- Interface → multiple inheritance, but no instance variables.
+
+## 5. When not to use interface?
+
+- If multiple classes share common state or functionality, use abstract class instead.
+
+## 6. Default methods in interfaces
+
+- Introduced in Java 8 to allow adding new methods without breaking existing implementations.
+
+- Can be overridden, but cannot access instance variables of implementing class.
+
+```java
+interface Animal {
+  default void sound() { System.out.println("Default sound"); }
+}
+class Dog implements Animal { }
+Dog d = new Dog(); d.sound(); // Output: Default sound
+```
+## 7. Default methods vs abstract methods
+Feature	Abstract Method	Default Method
+Body	❌ No	✅ Yes
+Must Override	✅ Yes	❌ Optional
+
+## 8. Conflict resolution with multiple interfaces
+- If two interfaces have the same default method, the implementing class must override.
+
+### Example
+```java
+interface Dog { default void sound(){} }
+interface Cat { default void sound(){} }
+class Animal implements Dog, Cat {
+  @Override void sound() { Dog.super.sound(); Cat.super.sound(); }
+}
+```
+
+## 🧠 Pro Tips for Interviews
+
+- Always mention that constructors initialize objects, not create them (new does that).
+- Constructor chaining (this(), super()) shows good understanding.
+- Abstract classes → use for shared code; interfaces → define behavior.
+- Default methods → backward compatible interface evolution.
+
+**Author:** `Guddu Kumar Yadav` \
+**Category:** System Design / LLD Interview Preparation \
 **Last Updated:** October 2025  

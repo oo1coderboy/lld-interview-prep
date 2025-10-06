@@ -31,9 +31,8 @@ Each section of the repo is organized into **lectures**, focusing on one key are
 
 1. **Navigate** to the lecture folder you want to study.  
 2. **Read** the `README.md` inside that folder to understand concepts.  
-3. **Open** the `.md` topic files (e.g., `Constructors.md`, `Inheritance.md`) for deeper study.  
-4. **Review** the Java code examples to see real-world implementations.  
-5. **Practice** by extending designs or solving similar problems.
+3. **Review** the Java code examples to see real-world implementations.  
+4. **Practice** by extending designs or solving similar problems.
 
 ---
 

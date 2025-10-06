@@ -94,3 +94,7 @@ it motivates and helps others discover these materials too!
 **“Design is not just how it looks, it’s how it works.” – Steve Jobs**
 
 Build clean. Design smart. Code confidently. 💪
+
+**Author:** `Guddu Kumar Yadav` \
+**Category:** System Design / LLD Interview Preparation \
+**Last Updated:** October 2025  
